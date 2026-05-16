@@ -3,7 +3,7 @@
 > A full-stack restaurant ordering site, built as a portfolio piece.
 > Next.js 14 · TypeScript · Tailwind · Supabase · Framer Motion.
 
-**Live demo:** _coming soon_ — deploy via Vercel (see [Deploy](#deploy) below).
+**Live demo:** https://cafe-verde-six.vercel.app
 
 ![Cafe Verde — Considered coffee, honest food.](./docs/screenshots/og-image.png)
 
