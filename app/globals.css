@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-cream text-charcoal antialiased font-sans;
+  }
+  ::selection {
+    @apply bg-forest/15 text-forest-deep;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .hairline {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(26,26,26,0.18), transparent);
+  }
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: scaleX(1);
+  }
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(20,30,24,0.15) 0%, rgba(20,30,24,0.10) 40%, rgba(20,30,24,0.55) 100%),
+      linear-gradient(180deg, rgba(20,30,24,0.35) 0%, rgba(20,30,24,0) 35%);
+  }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
